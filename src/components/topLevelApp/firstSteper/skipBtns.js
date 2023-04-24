@@ -1,5 +1,6 @@
-import { Button, Fab, Grid, Stack } from "@mui/material";
 import React from "react";
+import { Fab, Grid } from "@mui/material";
+import { motion } from "framer-motion";
 
 export const SkipBtns = (props) => {
 	const { changeActiveProp, active } = props;
@@ -14,26 +15,50 @@ export const SkipBtns = (props) => {
 	return (
 		<Grid container alignItems={"center"} spacing={2} justifyContent={"center"}>
 			<Grid item>
-				<Button variant="outlined" size="small" onClick={() => changeActualStep(false)}>
-					Back
-				</Button>
+				<motion.button style={{ border: "none", background: "none" }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+					<Fab
+						sx={{
+							fontSize: ".8rem",
+							height: "3rem",
+							width: "3rem",
+						}}
+						aria-label="skip"
+						color="primary"
+						onClick={() => changeActualStep(false)}
+					>
+						Back
+					</Fab>
+				</motion.button>
 			</Grid>
 			<Grid item>
-				<Fab
-					sx={{
-						fontSize: "1.2rem",
-						height: "4rem",
-						width: "4rem",
-					}}
-					aria-label="skip"
-				>
-					Skip
-				</Fab>
+				<motion.button style={{ border: "none", background: "none" }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+					<Fab
+						sx={{
+							fontSize: "1.2rem",
+							height: "4rem",
+							width: "4rem",
+						}}
+						aria-label="skip"
+					>
+						Skip
+					</Fab>
+				</motion.button>
 			</Grid>
 			<Grid item>
-				<Button variant="outlined" size="small" onClick={() => changeActualStep(true)} color="secondary">
-					Next
-				</Button>
+				<motion.button style={{ border: "none", background: "none" }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+					<Fab
+						sx={{
+							fontSize: ".8rem",
+							height: "3rem",
+							width: "3rem",
+						}}
+						aria-label="skip"
+						onClick={() => changeActualStep(true)}
+						color="secondary"
+					>
+						Next
+					</Fab>
+				</motion.button>
 			</Grid>
 		</Grid>
 	);

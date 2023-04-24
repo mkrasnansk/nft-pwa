@@ -10,7 +10,6 @@ import Stepper from "@mui/material/Stepper";
 import { styled } from "@mui/material/styles";
 import PropTypes from "prop-types";
 
-
 const QontoStepIconRoot = styled("div")(({ theme, ownerState }) => ({
 	color: theme.palette.mode === "dark" ? theme.palette.grey[700] : "#eaeaf0",
 	display: "flex",
@@ -62,12 +61,12 @@ const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
 	},
 	[`&.${stepConnectorClasses.active}`]: {
 		[`& .${stepConnectorClasses.line}`]: {
-			backgroundImage: "linear-gradient( 95deg,rgb(242,113,33) 0%,rgb(233,64,87) 50%,rgb(138,35,135) 100%)",
+			backgroundImage: "linear-gradient(to bottom, #cccccc, #b2b4b8, #959da3, #77888c, #5d7371, #507068, #466d5c, #42694d, #41774e, #40854d, #41924b, #43a047)",
 		},
 	},
 	[`&.${stepConnectorClasses.completed}`]: {
 		[`& .${stepConnectorClasses.line}`]: {
-			backgroundImage: "linear-gradient( 95deg,rgb(242,113,33) 0%,rgb(233,64,87) 50%,rgb(138,35,135) 100%)",
+			backgroundImage: "linear-gradient(to bottom, #cccccc, #b2b4b8, #959da3, #77888c, #5d7371, #507068, #466d5c, #42694d, #41774e, #40854d, #41924b, #43a047)",
 		},
 	},
 	[`& .${stepConnectorClasses.line}`]: {
@@ -89,11 +88,11 @@ const ColorlibStepIconRoot = styled("div")(({ theme, ownerState }) => ({
 	justifyContent: "center",
 	alignItems: "center",
 	...(ownerState.active && {
-		backgroundImage: "linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%)",
+		backgroundImage: "linear-gradient(to bottom, #cccccc, #b2b4b8, #959da3, #77888c, #5d7371, #507068, #466d5c, #42694d, #41774e, #40854d, #41924b, #43a047)",
 		boxShadow: "0 4px 10px 0 rgba(0,0,0,.25)",
 	}),
 	...(ownerState.completed && {
-		backgroundImage: "linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%)",
+		backgroundImage: "linear-gradient(to bottom, #cccccc, #b2b4b8, #959da3, #77888c, #5d7371, #507068, #466d5c, #42694d, #41774e, #40854d, #41924b, #43a047)",
 	}),
 }));
 
@@ -132,7 +131,7 @@ ColorlibStepIcon.propTypes = {
 };
 
 const steps = ["Buy NFT", "Log in", "Get the original!"];
-export const StepperIcons = ({active}) => {
+export const StepperIcons = ({ active }) => {
 	return (
 		<Stepper alternativeLabel activeStep={active} connector={<ColorlibConnector />}>
 			{steps.map((label) => (
