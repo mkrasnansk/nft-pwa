@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import { Box, Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import { SkipBtns } from "./firstSteper/skipBtns";
 import { StepperIcons } from "./firstSteper/stepperIcons";
 import { SwitchPage } from "./firstSteper/switchPage";
