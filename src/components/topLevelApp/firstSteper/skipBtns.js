@@ -27,7 +27,7 @@ export const SkipBtns = (props) => {
 							height: "3rem",
 							width: "3rem",
 						}}
-						aria-label="skip"
+						aria-label="back"
 						color="primary"
 						onClick={() => changeActualStep(false)}
 					>
@@ -58,7 +58,7 @@ export const SkipBtns = (props) => {
 							height: "3rem",
 							width: "3rem",
 						}}
-						aria-label="skip"
+						aria-label="next"
 						onClick={() => changeActualStep(true)}
 						color="secondary"
 					>
