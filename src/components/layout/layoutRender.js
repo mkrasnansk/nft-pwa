@@ -2,7 +2,8 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import { Box, CssBaseline, Grid, ThemeProvider } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { motion, useAnimationControls } from "framer-motion";
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { theme } from "../../theme/theme";
@@ -10,7 +11,6 @@ import { CollectionDetail } from "../collection/collectionDetail";
 import { FirstAppStepper } from "../firstSteper/firstAppStepper";
 import { BackdropPreloader } from "../smallComponents/backdrop";
 import { TopLayout } from "./topLayout";
-import { motion, useAnimationControls, useAnimationFrame } from "framer-motion";
 
 export const LayoutRender = () => {
 	const start = useSelector((state) => state.start.value);
