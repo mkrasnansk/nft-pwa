@@ -24,7 +24,7 @@ export const ViewCarouselOption = (props) => {
 		<motion.div
 			style={{
 				position: "absolute",
-				width: "50%",
+				width: "40vw",
 				height: "auto",
 				borderRadius: 30,
 				cursor: "pointer",
@@ -65,8 +65,8 @@ export const ViewCarouselOption = (props) => {
 							src={state.imgSrc}
 							alt=""
 							style={{
-								width: "100%",
-								height: "auto",
+								maxWidth: "100%",
+								maxHeight: 500,
 								padding: "3rem",
 							}}
 						/>

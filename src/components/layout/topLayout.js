@@ -1,8 +1,10 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import podpis from "../../accessories/svg/podpis.svg";
-import {CarouselCollection} from '../carousel/carouselCollection'
+import { CarouselCollection } from "../carousel/carouselCollection";
+
 export const TopLayout = () => {
+	
 	return (
 		<Grid
 			justifyContent="center"
@@ -13,12 +15,17 @@ export const TopLayout = () => {
 				minHeight: "100vh",
 			}}
 		>
-			<img src={podpis} alt="podpis" loading="lazy"  style={{
-				position:'absolute',
-				top:'20px',
-				left:'0px'
-			}} />
-			<CarouselCollection />
+			<img
+				src={podpis}
+				alt="podpis"
+				loading="lazy"
+				style={{
+					position: "absolute",
+					top: "20px",
+					left: "0px",
+				}}
+			/>
+				<CarouselCollection />
 		</Grid>
 	);
 };
