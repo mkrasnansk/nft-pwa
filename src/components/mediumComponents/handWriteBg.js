@@ -1,6 +1,5 @@
 import React from "react";
 import { Grid } from "@mui/material";
-import podpis from "../../accessories/svg/podpis.svg";
 
 export const HandWriteBg = () => {
 	return (
@@ -13,7 +12,6 @@ export const HandWriteBg = () => {
 				overflow: "hidden",
 			}}
 		>
-			<img src={podpis} alt="podpis" loading="lazy" />
 		</Grid>
 	);
 };

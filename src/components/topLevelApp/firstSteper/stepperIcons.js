@@ -9,17 +9,18 @@ import StepLabel from "@mui/material/StepLabel";
 import Stepper from "@mui/material/Stepper";
 import { styled } from "@mui/material/styles";
 import PropTypes from "prop-types";
+import { theme } from "../../../theme/theme";
 
-const QontoStepIconRoot = styled("div")(({ theme, ownerState }) => ({
-	color: theme.palette.mode === "dark" ? theme.palette.grey[700] : "#eaeaf0",
+const QontoStepIconRoot = styled("div")(({  ownerState }) => ({
+	color: theme.palette.primary.main ,
 	display: "flex",
 	height: 22,
 	alignItems: "center",
 	...(ownerState.active && {
-		color: "#784af4",
+		color: theme.palette.primary.main,
 	}),
 	"& .QontoStepIcon-completedIcon": {
-		color: "#784af4",
+		color: theme.palette.primary.main,
 		zIndex: 1,
 		fontSize: 18,
 	},
@@ -55,18 +56,18 @@ QontoStepIcon.propTypes = {
 	completed: PropTypes.bool,
 };
 
-const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
+const ColorlibConnector = styled(StepConnector)(() => ({
 	[`&.${stepConnectorClasses.alternativeLabel}`]: {
 		top: 22,
 	},
 	[`&.${stepConnectorClasses.active}`]: {
 		[`& .${stepConnectorClasses.line}`]: {
-			backgroundImage: "linear-gradient(to bottom, #cccccc, #b2b4b8, #959da3, #77888c, #5d7371, #507068, #466d5c, #42694d, #41774e, #40854d, #41924b, #43a047)",
+			backgroundImage: `linear-gradient(to bottom, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
 		},
 	},
 	[`&.${stepConnectorClasses.completed}`]: {
 		[`& .${stepConnectorClasses.line}`]: {
-			backgroundImage: "linear-gradient(to bottom, #cccccc, #b2b4b8, #959da3, #77888c, #5d7371, #507068, #466d5c, #42694d, #41774e, #40854d, #41924b, #43a047)",
+			backgroundImage: `linear-gradient(to bottom, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
 		},
 	},
 	[`& .${stepConnectorClasses.line}`]: {
@@ -77,10 +78,10 @@ const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
 	},
 }));
 
-const ColorlibStepIconRoot = styled("div")(({ theme, ownerState }) => ({
-	backgroundColor: theme.palette.mode === "dark" ? theme.palette.grey[700] : "#ccc",
+const ColorlibStepIconRoot = styled("div")(({  ownerState }) => ({
+	backgroundColor: theme.palette.primary.main,
 	zIndex: 1,
-	color: "#fff",
+	color: theme.palette.primary.main,
 	width: 50,
 	height: 50,
 	display: "flex",
@@ -88,11 +89,11 @@ const ColorlibStepIconRoot = styled("div")(({ theme, ownerState }) => ({
 	justifyContent: "center",
 	alignItems: "center",
 	...(ownerState.active && {
-		backgroundImage: "linear-gradient(to bottom, #cccccc, #b2b4b8, #959da3, #77888c, #5d7371, #507068, #466d5c, #42694d, #41774e, #40854d, #41924b, #43a047)",
+			backgroundImage: `linear-gradient(to bottom, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
 		boxShadow: "0 4px 10px 0 rgba(0,0,0,.25)",
 	}),
 	...(ownerState.completed && {
-		backgroundImage: "linear-gradient(to bottom, #cccccc, #b2b4b8, #959da3, #77888c, #5d7371, #507068, #466d5c, #42694d, #41774e, #40854d, #41924b, #43a047)",
+			backgroundImage: `linear-gradient(to bottom, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
 	}),
 }));
 

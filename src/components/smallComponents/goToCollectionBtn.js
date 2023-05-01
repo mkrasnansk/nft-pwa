@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 import { theme } from "../../theme/theme";
 import { useDispatch } from "react-redux";
 import { visibleBackdrop } from "../../store/features/preloaders/backdropSlice";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 export const GoToCollectionBtn = () => {
 	const dispatch = useDispatch();
@@ -16,12 +16,11 @@ export const GoToCollectionBtn = () => {
 					borderRadius: "1rem",
 					background: theme.palette.primary.main,
 					cursor: "pointer",
+					border: `1px solid ${theme.palette.secondary.mainTransparent}`
 				}}
 				onClick={() => dispatch(visibleBackdrop())}
 			>
-				<Typography autoFocus background="secondary" variant="h5">
-					Go to collection
-				</Typography>
+				<Typography variant="h5">Go to collection</Typography>
 			</Box>
 		</motion.div>
 	);

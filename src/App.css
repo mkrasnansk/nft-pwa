@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+.parent {
+  background: rgb(3, 3, 3);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent[data-isOpen="true"] {
+  width: 400px;
+  height: 200px;
+}
+
+.child {
+  width: 40px;
+  height: 40px;
+  background: #f107a3;
+  border-radius: 50%;
+}
+
+
+.box {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  border: 3px dotted var(--accent);
+  pointer-events: none;
+}
