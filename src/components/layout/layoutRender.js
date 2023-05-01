@@ -35,7 +35,8 @@ export const LayoutRender = () => {
 			<motion.div animate={animation} initial={{ opacity: 0 }}>
 				{detailCollection ? <CollectionDetail /> : ""}
 			</motion.div>
-			{start ? <TopLayout /> : <FirstAppStepper />}
+			{start ? <TopLayout /> : ""}
+			{!detailCollection && !start ? <FirstAppStepper /> : ""}
 		</ThemeProvider>
 	);
 };
