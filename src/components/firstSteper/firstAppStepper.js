@@ -1,8 +1,8 @@
 import React, { useCallback, useState } from "react";
 import { Grid } from "@mui/material";
-import { SkipBtns } from "./firstSteper/skipBtns";
-import { StepperIcons } from "./firstSteper/stepperIcons";
-import { SwitchPage } from "./firstSteper/switchPage";
+import { SwitchPage } from "./switchPage";
+import { SkipBtns } from "./skipBtns";
+import { StepperIcons } from "./stepperIcons";
 
 export const FirstAppStepper = () => {
 	const [activeStep, setActiveStep] = useState(0);

@@ -1,7 +1,7 @@
 import React from "react";
 import { Backdrop, CircularProgress } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
-import { visibleBackdrop } from "../store/features/preloaders/backdropSlice";
+import { visibleBackdrop } from "../../store/features/preloaders/backdropSlice";
 
 export const BackdropPreloader = () => {
 	const dispatch = useDispatch();

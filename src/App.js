@@ -4,11 +4,11 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import { Box, CssBaseline, ThemeProvider } from "@mui/material";
-import { FirstAppStepper } from "./components/topLevelApp/firstAppStepper";
-import { TopLayout } from "./components/topLevelApp/layout/topLayout";
+import { FirstAppStepper } from "./components/firstSteper/firstAppStepper";
+import { TopLayout } from "./components/layout/topLayout";
 import { theme } from "./theme/theme";
 import { useSelector } from "react-redux";
-import { BackdropPreloader } from "./components/backdrop";
+import { BackdropPreloader } from "./components/smallComponents/backdrop";
 
 function App() {
 	const start = useSelector((state) => state.start.value);

@@ -1,8 +1,7 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
-import { ViewCarouselOption } from "../smallComponents/viewCarousel";
 import collection1 from "../../accessories/images/collection1.png";
-import podpis from "../../accessories/svg/podpis.svg";
+import { ViewCarouselOption } from "./viewCarousel";
 
 let arrView = [
 	{ imgSrc: collection1, position: -150, actual: "left", keyIdx: 0, center: false, changed: false },
@@ -23,14 +22,12 @@ export const CarouselCollection = () => {
 			} else {
 				arrView[i.keyIdx].changed = false;
 			}
-			console.log(i, "set");
 			return i;
 		});
 		arrView[key].center = true;
 		arrView[key].position = 0;
 		arrView[key].actual = "center";
 
-		console.log(arrView, "Upravene");
 		setViewArr(arrView);
 	};
 	return (

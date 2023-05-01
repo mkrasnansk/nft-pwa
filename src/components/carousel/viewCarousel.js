@@ -1,15 +1,15 @@
 import { Grid, Paper } from "@mui/material";
 import { motion, useAnimationControls } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { GoToCollectionBtn } from "./goToCollectionBtn";
 
 export const ViewCarouselOption = (props) => {
-	const [state, setState] = useState(props.statePosition);
+	const state = props.statePosition
 	const animation = useAnimationControls();
 
 	useEffect(() => {
 		if (state.center) animation.start({ scale: 1.2 });
-	}, []);
+	}, [animation, state]);
 
 	async function sequence(posX = 0) {
 		await animation.start({ x: posX });

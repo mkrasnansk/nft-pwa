@@ -9,7 +9,7 @@ import StepLabel from "@mui/material/StepLabel";
 import Stepper from "@mui/material/Stepper";
 import { styled } from "@mui/material/styles";
 import PropTypes from "prop-types";
-import { theme } from "../../../theme/theme";
+import { theme } from "../../theme/theme";
 
 const QontoStepIconRoot = styled("div")(({  ownerState }) => ({
 	color: theme.palette.primary.main ,

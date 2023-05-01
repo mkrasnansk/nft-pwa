@@ -2,7 +2,7 @@ import { Fab, Grid } from "@mui/material";
 import { motion } from "framer-motion";
 import React from "react";
 import { useDispatch } from "react-redux";
-import { setcrement } from "../../../store/features/start/startSlice";
+import { setcrement } from "../../store/features/start/startSlice";
 
 export const SkipBtns = (props) => {
 	const dispatch = useDispatch();
@@ -20,7 +20,7 @@ export const SkipBtns = (props) => {
 	return (
 		<Grid container alignItems={"center"} spacing={2} justifyContent={"center"}>
 			<Grid item>
-				<motion.button style={{ border: "none", background: "none" }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+				<motion.div style={{ border: "none", background: "none" }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
 					<Fab
 						sx={{
 							fontSize: ".8rem",
@@ -33,10 +33,10 @@ export const SkipBtns = (props) => {
 					>
 						Back
 					</Fab>
-				</motion.button>
+				</motion.div>
 			</Grid>
 			<Grid item>
-				<motion.button style={{ border: "none", background: "none" }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+				<motion.div style={{ border: "none", background: "none" }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
 					<Fab
 						sx={{
 							fontSize: "1.2rem",
@@ -48,10 +48,10 @@ export const SkipBtns = (props) => {
 					>
 						Skip
 					</Fab>
-				</motion.button>
+				</motion.div>
 			</Grid>
 			<Grid item>
-				<motion.button style={{ border: "none", background: "none" }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+				<motion.div style={{ border: "none", background: "none" }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
 					<Fab
 						sx={{
 							fontSize: ".8rem",
@@ -64,7 +64,7 @@ export const SkipBtns = (props) => {
 					>
 						Next
 					</Fab>
-				</motion.button>
+				</motion.div>
 			</Grid>
 		</Grid>
 	);
