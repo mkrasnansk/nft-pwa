@@ -37,7 +37,7 @@ export const CardCollection = (props) => {
 	if (loadedSrc === props.data.item) {
 		return (
 			<motion.div animate={{ scale: 1 }} initial={{ scale: 0 }} transition={{ type: "spring", stiffness: 100 }}>
-				<Card sx={{ width: "100%", background: "linear-gradient(to right bottom, #FFFFFF,#F0F0F0,#E6E6E6)" }}>
+				<Card sx={{ width: "100%", background: "linear-gradient(to right bottom, #FFFFFF,#F0F0F0,#E6E6E6,#F0F0F0, #FFFFFF)" }}>
 					<CardHeader
 						action={
 							<IconButton aria-label="settings">

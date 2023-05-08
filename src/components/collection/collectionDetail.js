@@ -4,6 +4,8 @@ import { useSelector } from "react-redux";
 import { CardCollection } from "./cardCollection";
 export const CollectionDetail = (props) => {
 	const arrImg = useSelector((state) => state.arrImg.value);
+	const small = useSelector((state) => state.small.value);
+
 	return (
 		<>
 			<Grid container justifyContent="center" spacing={2} padding={5}>
@@ -15,14 +17,14 @@ export const CollectionDetail = (props) => {
 						justifyContent: "center",
 					}}
 				>
-					<Typography variant="h1">Collection Detail</Typography>
+					<Typography variant={small ? "h4" : "h1"}>Loving lions</Typography>
 				</Grid>
 			</Grid>
 			<Grid
 				container
 				justifyContent="center"
 				spacing={2}
-				padding={5}
+				padding={small ? 1 : 5}
 				sx={{
 					width: "100%",
 				}}
