@@ -1,32 +1,40 @@
 import { Grid, Typography } from "@mui/material";
-import React, { useState } from "react";
-import { imageArr } from "../../accessories/images/nftImage/arrImages";
-export const CollectionDetail = () => {
-	const [collection, setCollection] = useState(imageArr);
+import React from "react";
+import { useSelector } from "react-redux";
+import { CardCollection } from "./cardCollection";
+export const CollectionDetail = (props) => {
+	const arrImg = useSelector((state) => state.arrImg.value);
 	return (
-		<Grid container justifyContent="center">
+		<>
+			<Grid container justifyContent="center" spacing={2} padding={5}>
+				<Grid
+					item
+					xs={12}
+					sx={{
+						display: "flex",
+						justifyContent: "center",
+					}}
+				>
+					<Typography variant="h1">Collection Detail</Typography>
+				</Grid>
+			</Grid>
 			<Grid
-				item
-				sm={12}
+				container
+				justifyContent="center"
+				spacing={2}
+				padding={5}
 				sx={{
-					display: "flex",
-					justifyContent: "center",
+					width: "100%",
 				}}
 			>
-				<Typography variant="h1">CollectionDetail</Typography>
+				{arrImg.map((item, keyIdx) => {
+					return (
+						<Grid item key={keyIdx} justifyContent="center" xs={12} md={6} xl={3}>
+							<CardCollection data={{ ...item, keyIdx, len: arrImg.length }} />
+						</Grid>
+					);
+				})}
 			</Grid>
-			{collection.map((item, keyIdx) => {
-				return (
-					<Grid key={keyIdx} justifyContent='center' item xs={12} md={6} xl={3} style={{
-						backgroundImage: `url(${item})`,
-						height:'500px',
-						backgroundRepeat: 'no-repeat',
-						backgroundPosition: 'center',
-						backgroundSize:'contain' //auto|length|cover|contain|intial|inherit
-					}}>
-					</Grid>
-				);
-			})}
-		</Grid>
+		</>
 	);
 };

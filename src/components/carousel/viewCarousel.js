@@ -2,6 +2,7 @@ import { Grid, Paper } from "@mui/material";
 import { motion, useAnimationControls } from "framer-motion";
 import React, { useEffect } from "react";
 import { GoToCollectionBtn } from "./goToCollectionBtn";
+import { SmileRating } from "../smallComponents/smileRating";
 
 export const ViewCarouselOption = (props) => {
 	const state = props.statePosition
@@ -70,6 +71,7 @@ export const ViewCarouselOption = (props) => {
 								padding: "3rem",
 							}}
 						/>
+						<SmileRating/>
 					</Grid>
 				</Grid>
 			</Paper>
