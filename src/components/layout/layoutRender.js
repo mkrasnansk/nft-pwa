@@ -1,7 +1,3 @@
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
 import { Container, CssBaseline, ThemeProvider, useMediaQuery } from "@mui/material";
 import React, { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";

@@ -1,6 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import React from "react";
 import { useSelector } from "react-redux";
+import { MenuButton } from "../smallComponents/menuButton";
 import { CardCollection } from "./cardCollection";
 export const CollectionDetail = (props) => {
 	const arrImg = useSelector((state) => state.arrImg.value);
@@ -15,9 +16,20 @@ export const CollectionDetail = (props) => {
 					sx={{
 						display: "flex",
 						justifyContent: "center",
+						width: "100%",
 					}}
 				>
 					<Typography variant={small ? "h4" : "h1"}>Loving lions</Typography>
+				</Grid>
+				<Grid
+					xs={12}
+					item
+					sx={{
+						position: "absolute",
+						right: '5%'
+					}}
+				>
+					<MenuButton />
 				</Grid>
 			</Grid>
 			<Grid

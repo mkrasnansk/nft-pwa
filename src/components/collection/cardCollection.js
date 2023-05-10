@@ -1,7 +1,7 @@
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { Card, CardActions, CardContent, CardHeader, CardMedia, IconButton, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { visibleBackdrop } from "../../store/features/preloaders/backdropSlice";
 import { CardIcons } from "../smallComponents/cardIcons";
@@ -11,11 +11,11 @@ export const CardCollection = (props) => {
 	const dispatch = useDispatch();
 	const [loadedSrc, setLoadedSrc] = useState(null);
 
-	const handleLoad = () => {
+	const handleLoad = useCallback(() => {
 		setLoadedSrc(item);
-	};
-	let image;
-	const preloader = () => {
+	}, [item]);
+	const preloader = useCallback(() => {
+		let image;
 		let endIdx = keyIdx + 1;
 		if (endIdx === len) {
 			setTimeout(() => {
@@ -30,10 +30,12 @@ export const CardCollection = (props) => {
 				image.removeEventListener("load", handleLoad);
 			};
 		}
-	};
+	}, [dispatch, item, keyIdx, len, handleLoad]);
+
 	useEffect(() => {
 		preloader();
-	}, []);
+	}, [preloader]);
+
 	if (loadedSrc === props.data.item) {
 		return (
 			<motion.div animate={{ scale: 1 }} initial={{ scale: 0 }} transition={{ type: "spring", stiffness: 100 }}>
@@ -52,7 +54,7 @@ export const CardCollection = (props) => {
 						<Typography variant="body2">{title}</Typography>
 					</CardContent>
 					<CardActions disableSpacing>
-						<CardIcons />
+						<CardIcons data={item} />
 					</CardActions>
 				</Card>
 			</motion.div>
